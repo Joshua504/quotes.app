@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- -------------------------------- icons -------------------------------- -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- -------------------------------- fonts -------------------------------- -->
+		<link
+			href="https://api.fontshare.com/v2/css?f[]=pilcrow-rounded@400,500,600&f[]=array@400,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="/index.js" defer></script>
+		<title>quotes</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="bg-txt">quotes</h1>
+			<div class="inputs">
+				<select name="" class="input_1" id="">
+					<option value="" disabled selected>Select type</option>
+					<option value="Humorous">Humorous</option>
+					<option value="Politics">Politics</option>
+					<option value="Wisdom">Wisdom</option>
+					<option value="History">History</option>
+					<option value="Conservative">Conservative</option>
+					<option value="Famous Quotes">Famous Quotes</option>
+					<option value="Friendship">Friendship</option>
+					<option value="Freedom">Freedom</option>
+				</select>
+				<div class="sub-con">
+					<select class="input_2" name="" id="">
+						<option value="" disabled selected>Select amount</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+					<button class="sub-btn">
+						<ion-icon class="icon" name="sync-outline"></ion-icon>
+					</button>
+				</div>
+			</div>
+			<section class="q-container"></section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.5s ease;
+}
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background: #e2efde;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 1em;
+
+	.bg-txt {
+		font-family: "Array", sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 4rem;
+		margin-bottom: 1em;
+	}
+
+	.inputs {
+		display: grid;
+		grid-template-columns: 1fr 0.5fr;
+		gap: 1em;
+		margin-bottom: 1em;
+
+		@media (width <= 767px) {
+			grid-template-columns: 1fr;
+			gap: 0.5em;
+		}
+
+		select {
+			border: 2px solid #00abe7;
+			border-radius: 10px;
+			padding: 0.625em;
+			outline: transparent;
+			font-size: 1.25rem;
+			font-family: "Pilcrow Rounded", sans-serif;
+			// width: 100%;
+		}
+
+		.sub-con {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1em;
+			// flex: 1;
+		}
+
+		.input_2 {
+			width: 100%;
+		}
+
+		.sub-btn {
+			padding: 0.625em 1em;
+			outline: transparent;
+			border: none;
+			background: #00abe7;
+			cursor: pointer;
+			color: #f3f1f2;
+			border-radius: 10px;
+
+			&:hover .icon {
+				animation: rotate 0.5s linear infinite;
+				background: #0093c9;
+			}
+
+			&:hover {
+				background: #0093c9;
+			}
+
+			.icon {
+				background: #00abe7;
+				font-size: 1.6rem;
+			}
+		}
+
+		@keyframes rotate {
+			0% {
+				rotate: 0deg;
+			}
+			100% {
+				rotate: 360deg;
+			}
+		}
+	}
+
+	.q-container {
+		border: 2px solid #000;
+		border-radius: 10px;
+		padding: 1.5em;
+		font-family: "Pilcrow Rounded", sans-serif;
+		width: 650px;
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		align-items: center;
+		// overflow-x: scroll;
+		margin-bottom: 1em;
+		display: none;
+
+		@media (width <= 767px) {
+			padding: 0.6em;
+			width: auto;
+		}
+
+		.quotes {
+			position: relative;
+			background: #00abe7;
+			padding: 1em;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			width: 600px;
+			text-wrap: wrap;
+			cursor: pointer;
+			
+
+			@media (width <= 767px) {
+				width: auto;
+			}
+
+			&:hover .quote_txt {
+				color: #f3f1f2;
+			}
+
+			.quote_categories {
+				text-transform: uppercase;
+				font-family: "Array", sans-serif;
+				font-size: 2rem;
+				text-align: center;
+				margin-bottom: 1em;
+			}
+
+			.quote_txt {
+				font-size: 3rem;
+				margin-bottom: 0.5em;
+
+				@media (width <= 767px) {
+					font-size: 2.5rem;
+				}
+			}
+
+			.quote_author {
+				font-size: 2rem;
+				font-weight: 700;
+				text-align: right;
+			}
+		}
+
+		.active {
+			display: block;
+		}
+	}
+}
